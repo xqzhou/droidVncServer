@@ -1,5 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 
+LOCAL_CFLAGS += -fPIE
+LOCAL_LDFLAGS += -fPIE -pie
+
 # We need to build this for both the device (as a shared library)
 # and the host (as a static library for tools to use).
 

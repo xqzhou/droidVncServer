@@ -1,5 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 
+LOCAL_CFLAGS += -fPIE
+LOCAL_LDFLAGS += -fPIE -pie
+
 local_c_includes := \
 	$(LOCAL_PATH)/../ \
 	$(LOCAL_PATH)/../ssl\

@@ -1,5 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 
+LOCAL_CFLAGS += -fPIE
+LOCAL_LDFLAGS += -fPIE -pie
+
 arm_cflags := -DOPENSSL_BN_ASM_MONT -DAES_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM
 arm_src_files := \
     aes/asm/aes-armv4.s \

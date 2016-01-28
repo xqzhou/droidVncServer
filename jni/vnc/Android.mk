@@ -1,6 +1,9 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS += -fPIE
+LOCAL_LDFLAGS += -fPIE -pie
+
 LIBVNCSERVER_ROOT:=./LibVNCServer-0.9.9
 
 LIBVNCSERVER_SRC_FILES:= \
@@ -44,7 +47,7 @@ LOCAL_CFLAGS  +=  -Wall \
 									-DLIBVNCSERVER_HAVE_ZLIB \
 									-DLIBVNCSERVER_HAVE_LIBJPEG
 
-LOCAL_LDLIBS +=  -llog -lz -ldl 
+LOCAL_LDLIBS +=  /Users/xq/Downloads/libjpeg.so -llog -lz -ldl
 
 LOCAL_SRC_FILES += \
 									 $(LIBVNCSERVER_SRC_FILES)\

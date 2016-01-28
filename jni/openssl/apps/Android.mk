@@ -2,6 +2,9 @@
 
 LOCAL_PATH:= $(call my-dir)
 
+LOCAL_CFLAGS += -fPIE
+LOCAL_LDFLAGS += -fPIE -pie
+
 local_src_files:= \
 	app_rand.c \
 	apps.c \
